@@ -1,5 +1,7 @@
 package com.company;
 
+import static java.lang.Math.min;
+
 class Solustion {
     public boolean isPalindrome(int x) {
         int a = 0;
@@ -23,4 +25,15 @@ class Solustion {
         }
 
     }
-}
+
+        public int minCostClimbingStairs(int[] cost) {
+            int prev = 0, curr = 0,costSize=cost.length;
+
+            for (int i = 2; i <= costSize; i++) {
+                int next = min(curr + cost[i - 1], prev + cost[i - 2]);
+                prev = curr;
+                curr = next;
+            }
+            return curr;
+        }
+    }
