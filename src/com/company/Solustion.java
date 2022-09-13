@@ -25,6 +25,14 @@ class Solustion {
         }
 
     }
+//              101,100,1
+    /*
+                     101,100,1,1,1,100,1,1,100,1
+                 i=2  next=min(100,101)=100  prev=0，curr=100，
+                 i=3  next=min(100+1,0+100)=100 prev=100,curr=100
+                 i=4     100,101
+     */
+
 
         public int minCostClimbingStairs(int[] cost) {
             int prev = 0, curr = 0,costSize=cost.length;
